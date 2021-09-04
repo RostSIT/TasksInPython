@@ -1,1 +1,1 @@
-# ---Python-egoroff_channel
+# ---Инди-курс программирования на Python от egoroff_channel
