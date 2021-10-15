@@ -24,4 +24,4 @@ True
 '''
 
 a, b, c, = map(int, input().split())
-print(a == c)
+print(a == c or a == b or c == b)
