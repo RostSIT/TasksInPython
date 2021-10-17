@@ -23,5 +23,5 @@ Sample Output:
 a = input().lower()
 for i in 'aoyeui':
     a = a.replace(i, '')
-a = ','.join(a)
-print(',' + a)
+a = '.'.join(a)
+print('.' + a)
