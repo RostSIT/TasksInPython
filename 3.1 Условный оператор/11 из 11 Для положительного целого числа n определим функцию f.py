@@ -39,6 +39,7 @@ Sample Output 2:
 # It's my example.
 n = int(input())
 
+
 def f(n):
     c = 0
     a = range(n)
@@ -52,6 +53,7 @@ def f(n):
 
 
 f(n)
+# Не приняло по лимиту времени обработки кода (Failed test #3 of 22. Time limit exceeded)
 
 ###################################################
 
