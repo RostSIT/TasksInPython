@@ -22,7 +22,8 @@ Sample Output 2:
 
 n = int(input())
 
-for i in range(1, n + 1):
+for i in range(n+1):
+    for j in range(i):
+        print(j+1, end=' ')
+    print()
 
-    for j in range(1, i):
-        print(i, j)
