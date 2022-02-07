@@ -23,34 +23,41 @@ Sample Output:
 39 38 37 36 35 34 33 32 31 30
 """
 
+c = 0
 n, m = map(int, input().split())
 mas = []
 for i in range(n):
     mas.append([0] * m)
-# print(mas)
 count = 0
 ten = 10
 counter = 0
-# for i in mas:
-#     print(i)
 for i in range(n):
     for j in range(m):
-        mas[i][j] += count
-        if mas[i][j] < 10:
-            print(mas[i][j], end='  ')
+        if i % 2 == 0 or i == 0:
+            mas[i][j] += count
+            count += 1
+            print(mas[i][j], end='  ') if mas[i][j] < 10 else print(mas[i][j], end=' ')
         else:
-            print(mas[i][j], end=' ')
-        count += 1
+            mas[i][j] += count + m * i - 1 - counter
+            count += 1
+            counter += 2
+            print(mas[i][j], end='  ') if mas[i][j] < 10 else print(mas[i][j], end=' ')
+    print()
 
-    print()
-    counter += 1
-    if counter == n:
-        break
-    for j in range(m - 1, -1, -1):
-        mas[i][j] += ten
-        print(mas[i][j], end=' ')
-        count += 1
-    counter += 1
-    if counter == n:
-        break
-    print()
+#               print(mas[i][j], end=' ')
+#         count += 1
+#
+#     c = mas[i][j]
+# print()
+# counter += 1
+# if counter == n:
+#     break
+# for j in range(m-1, -1, -1):
+#     mas[i][j] = c + 1
+#     c += 1
+#     print(mas[i][j], end=' ')
+#     count += 1
+# counter += 1
+# if counter == n:
+#     break
+# print()
