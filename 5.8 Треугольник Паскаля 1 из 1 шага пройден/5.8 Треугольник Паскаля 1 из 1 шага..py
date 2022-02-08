@@ -1,22 +1,16 @@
 n = int(input())
-mas = [[0] * n for i in range(n)]
 
+triangle = []
 for i in range(n):
-    for j in range(n):
-        if j == 0:
-            mas[i][j] = 1
-        else:
-            mas[i][j] = 0
+    triangle.append([1] + [0]*(n-1))
+for i in triangle:
+    print(i)
+print()
+for i in range(1, n):
+    for j in range(1, i+1):
+        triangle[i][j] = triangle[i - 1][j] + triangle[i - 1][j - 1]
 
-        print(mas[i][j], end=' ')
+for i in range(0, n):
+    for j in range(0, i+1):
+        print(triangle[i][j], end=' ')
     print()
-for i in range(n, 1, 1):
-    for j in range(n):
-        if mas[i - 1][j] > 0 and mas[i][j + 1] > 0:
-            print()
-            mas[i][j] = mas[i - 1][j] + mas[i][j + 1] > 0
-            print(mas[i][j], end=' ')
-        else:
-            mas[i][j] = 0
-            print(mas[i][j], end=' ')
-        print()
