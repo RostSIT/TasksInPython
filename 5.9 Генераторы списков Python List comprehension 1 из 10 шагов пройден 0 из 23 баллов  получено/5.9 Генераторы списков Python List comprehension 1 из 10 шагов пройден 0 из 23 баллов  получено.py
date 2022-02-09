@@ -68,8 +68,3 @@ print()
 a = [i * j for i in [2, 3, 4, 5] for j in [1, 2, 3] if i * j > 10]
 print(a)
 print(10)
-
-
-
-
-

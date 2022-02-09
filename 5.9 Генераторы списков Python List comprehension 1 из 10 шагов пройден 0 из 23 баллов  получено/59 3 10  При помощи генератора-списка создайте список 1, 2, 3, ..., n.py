@@ -24,5 +24,4 @@ Sample Output 3:
 """
 
 n = int(input())
-a = [i + 1 for i in range(n)]
-print(a)
+print([i + 1 for i in range(n)])

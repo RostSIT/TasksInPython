@@ -6,10 +6,4 @@
 """
 st = 'Create a list of the first letters of every word in this string'
 
-Firstletters = []
-for i in st.split():
-    Firstletters += i[0]
-print(Firstletters)
-
-# print([Firstletters.append(i) for i in st.split() if i[0]])
-
+print([i[0] for i in st.split()])
