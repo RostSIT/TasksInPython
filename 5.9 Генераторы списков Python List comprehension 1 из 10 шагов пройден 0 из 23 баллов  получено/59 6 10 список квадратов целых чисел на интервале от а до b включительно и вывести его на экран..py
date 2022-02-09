@@ -34,5 +34,14 @@ Sample Output 3:
 
 a, b = map(int, input().split())
 
+n = range(a, b + 1)
 
-mas = [i ** 2 if a <= b else i ** 3 for i in range(a, b + 1)]
+# mas = [i ** 2 if a <= b else i ** 3 and n = range(b, a+1)[::-1] for i in n]
+# # print(mas)
+
+if a <= b:
+    print([i ** 2 for i in range(a, b + 1)])
+else:
+    print(([i ** 3 for i in range(b, a+1)[::-1]]))
+
+
