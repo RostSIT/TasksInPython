@@ -1,7 +1,21 @@
+
+string = input()
+st = set()
+for i in string:
+    if i.isdigit():
+        if string.count(i) > 1:
+            st.add(i)
+if len(st) != 0:
+    for i in sorted(st):
+        print(i, end=' ')
+else:
+    print('NO')
+
+
 """
 6.5 Множества в Python. Тип данных set
-3 из 11 шагов пройдено
-2 из 24 баллов  получено
+4 из 11 шагов пройдено
+3 из 24 баллов  получено
 Напишите программу, которая выводит все цифры, встречающиеся в символьной строке больше одного раза.
 
 Входные данные
@@ -29,14 +43,3 @@ Sample Output 3:
 
 NO
 """
-
-string = set(input())
-a = set()
-counter = 0
-b = {}
-for i in sorted(string):
-    if i.isdigital:
-        counter += 1
-        b.setdefault(i, counter)
-
-    s
