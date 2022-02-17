@@ -1,17 +1,17 @@
+comments = {
+    'Дили': set(),
+    'Вили': set(),
+    'Били': set(),
+}
+a = input()
+while a != 'конец':
+    name, commentator = a.split(': ')
+    comments[name].add(commentator)
+    a = input()
 
-a = True
-resolt = {'Били': set(), 'Вили': set(), 'Дили': set()}
-while a == True:
-    vvod = input()
-    if vvod == 'конец':
-        a = False
-    else:
-        name, value = vvod.split(': ')
-        resolt[name].add(value)
-for i in resolt:
-    resolt[i] = len(resolt[i])
-for i in sorted(resolt.items(), key=lambda para: -para[1]):
-    print('Количество уникальных комментаторов у', i[0], '-', i[1])
+for k, v in sorted(comments.items(), key=lambda item: -len(item[1])):
+    print(f'Количество уникальных комментаторов у {k} - {len(v)}')
+
 """
 6.5 Множества в Python. Тип данных set
 6 из 11 шагов пройдено
