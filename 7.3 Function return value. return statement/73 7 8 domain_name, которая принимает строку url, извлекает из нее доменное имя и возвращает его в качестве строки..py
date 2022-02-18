@@ -1,5 +1,9 @@
 def domain_name(x):
-    y=[]
+    """"""
+
+
+
+    y = []
     if '//' in x:
         x.split('//')
         x.split('.')
@@ -8,7 +12,7 @@ def domain_name(x):
             return y
         else:
             x.split('.')
-            #y.append(i)
+            # y.append(i)
     return y
 
 
