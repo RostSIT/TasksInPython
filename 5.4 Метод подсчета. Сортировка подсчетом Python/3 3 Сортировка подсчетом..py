@@ -44,7 +44,7 @@ count = [0] * 201
 
 for i in a:
     count[int(i) + 100] += 1
-# print(count)
+    print(count)
 for i in range(201):
     if count[int(i)] > 0:
         print((str(int(i) - 100) + ' ') * count[i], end='')
